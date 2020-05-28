@@ -6,7 +6,6 @@
     </el-header>
 
     <el-container>
-      <!-- 侧边栏 -->
       <el-aside width="200px">
         <template>
          <el-row class="tac">
