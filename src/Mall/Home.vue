@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <!-- 标题头 -->
+
     <el-header >
       用户:{{username}}
     </el-header>
