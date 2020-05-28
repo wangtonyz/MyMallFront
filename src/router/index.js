@@ -1,28 +1,44 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+
+import Login from "@/Mall/Login";
+import Register from "@/Mall/Register";
+import Home from "@/Mall/Home";
+import CheckOrder from "@/components/CheckOrder";
+import CreateOrder from "@/components/CreateOrder";
+
 
 Vue.use(VueRouter);
 
-const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
-  }
-];
-
 const router = new VueRouter({
-  routes
+  mode: "history",
+  routes: [
+    {
+      path: "/",
+      name: "Login",
+      component: Login
+    },
+    {
+      path: "/register",
+      name: "Register",
+      component: Register
+    },
+    {
+      path: "/home",
+      name: "Home",
+      component: Home
+    },
+    {
+      path: "/checkorder",
+      name: "CheckOrder",
+      component: CheckOrder
+    },
+    {
+      path: "/createorder",
+      name: "CreateOrder",
+      component: CreateOrder
+    },
+  ]
 });
 
 export default router;
